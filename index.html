@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+    <meta keywords="LogiCadi HomePage 主页">
+    <title>Logi&Cadi's Page</title>
+    <style>
+        html,
+        body {
+            margin: auto;
+            text-align: center;
+            color: #333;
+
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            z-index: -1;
+            background: url(./images/bpic4834.jpg) top center/cover no-repeat;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .head {
+            padding-top: 50px;
+        }
+
+        .head h1 {
+            margin: 50px;
+            opacity: 0;
+            -webkit-transition: 2s;
+            transition: 2s;
+        }
+
+        .head p {
+            font-size: 24px;
+            opacity: 0;
+            -webkit-transition: 2s;
+            transition: 2s;
+
+        }
+
+        .head p .say {
+            background: linear-gradient(to right, #C33764, #1D2671);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+
+        .example {
+            margin: 50px auto;
+            opacity: 0;
+            -webkit-transition: 3s;
+            transition: 3s;
+            font-family: 'Georgia';
+
+        }
+
+        .example p {
+            font-weight: 700;
+        }
+
+        .example .case {
+            width: 50vw;
+            max-width: 300px;
+            margin: 20px auto;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .example .img-div {
+            /* width: 100%;
+            vertical-align: top; */
+            width: 100%;
+            height: 32vw;
+            max-height: 200px;
+            background-position: center;
+            background-size: cover;
+            z-index: 9;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #666;
+            padding-bottom: 20px;
+            color: rgba(255, 255, 255, 0.582);
+        }
+
+        canvas {
+            bottom: 0;
+            left: 0;
+            position: fixed;
+            opacity: .2;
+            right: 0;
+            top: 0;
+            z-index: -1;
+        }
+
+        #c1 {
+            opacity: 0;
+        }
+
+        #c2 {
+            background: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="c1"></canvas>
+    <canvas id="c2"></canvas>
+
+
+    <div class="container">
+        <div class="cantain-box">
+            <div class="head">
+                <h1>欢迎!</h1>
+                <p><span class="say">Never say Never!</span></p>
+
+            </div>
+            <div class="example">
+                <p>Practice Works</p>
+                <div class="case">
+                    <a href="./case_6_2048/index.html">
+                        <div class="img-div" style="background-image: url(images/2048.png);" alt=""></div>
+                    </a>
+                </div>
+                <div class="case">
+                    <a href="./case_5_flappybird/index.html">
+                        <div class="img-div" style="background-image: url(images/fb.png);" alt=""></div>
+                    </a>
+                </div>
+                <div class="case">
+                    <a href="./case_4_cartAnimate/index.html">
+                        <div class="img-div" style="background-image: url(images/20180626114256.png);" alt=""></div>
+                    </a>
+                </div>
+                <div class="case">
+                    <a href="./case_3_tanchishe/index.html">
+                        <div class="img-div" style="background-image: url(images/20180617000803.png)" alt=""></div>
+                    </a>
+                </div>
+                <div class="case">
+                    <a href="./case_2_xuanxifu/index.html">
+                        <div class="img-div" style="background-image: url(images/20180616120150.png)" alt=""></div>
+                    </a>
+                </div>
+                <div class="case">
+                    <a href="./case_1_lunbotu/index.html">
+                        <div class="img-div" style="background-image: url(images/20180616000655.jpg)" alt=""></div>
+                    </a>
+                </div>
+            </div>
+            <div class="footer">edit by 罗凯</div>
+            <!-- <div class="footer">2018-06-15 edit by <a href="https://logicadi.gitee.io/web/resume/">罗凯</a></div> -->
+        </div>
+
+    </div>
+
+    <script src="./js/canvas.js"></script>
+    <script>
+        window.onload = function () {
+
+            var h1s = document.getElementsByClassName("head")[0].getElementsByTagName("h1");
+            var ps = document.getElementsByClassName("head")[0].getElementsByTagName("p");
+            var example = document.querySelector(".example");
+
+            example.style.opacity = "1";
+            setTimeout(function () {
+                for (var i = 0; i < h1s.length; i++) {
+                    h1s[i].style.opacity = "1";
+                    h1s[i].style.transform = "translate(0,-10px)";
+                }
+            }, 300);
+
+            setTimeout(function () {
+                for (var i = 0; i < ps.length; i++) {
+                    ps[i].style.opacity = "1";
+                    ps[i].style.transform = "translate(0,-10px)";
+                }
+            }, 900);
+        };
+    </script>
+</body>
+
+</html>
