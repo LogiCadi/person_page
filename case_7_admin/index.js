@@ -109,11 +109,14 @@ $('.copy-btn').click(function () {
     obj.select()
     document.execCommand("Copy")
     alert("复制成功");
+
+    $('#myModal-2').modal('hide')
+
 })
 
 // 导入data
 $('.io-btn').click(function () {
-    data = JSON.parse($('.io-data-textarea').val())
+    let data = JSON.parse($('.io-data-textarea').val())
 
     localStorage.setItem('planComplete', JSON.stringify(data.planComplete))
     localStorage.setItem('planList', JSON.stringify(data.planList))
